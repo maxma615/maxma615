@@ -5,7 +5,7 @@ export const portfolioData = {
     location: '中国 · 可远程协作',
     intro: '我把复杂问题拆解成可落地的产品、算法与体验。这里记录我的比赛、项目与持续探索。',
     email: 'hello@example.com',
-    github: 'https://github.com/your-handle'
+    github: 'https://github.com/maxma615'
   },
   achievements: [
     { year: '2025', award: '全国一等奖', event: '全国大学生计算机设计大赛', detail: '以智能交互作品完成从方案到演示的完整交付。' },
@@ -16,7 +16,7 @@ export const portfolioData = {
   projects: [
     { index: '01', title: '智能学习助手', description: '面向复杂知识整理的 AI 应用，把资料提炼、任务分解与学习反馈组织为流畅的一条工作流。', role: '产品设计 · 全栈开发', tags: ['LLM', 'React', 'Python'], link: '#contact', linkLabel: '查看合作方式' },
     { index: '02', title: '视觉检测系统', description: '从数据标注到边缘部署的视觉识别方案，用于更快、更稳定地发现真实场景中的关键目标。', role: '算法工程 · 部署优化', tags: ['Computer Vision', 'ONNX', 'Edge AI'], link: '#achievements', linkLabel: '查看竞赛实践' },
-    { index: '03', title: '开源开发工具', description: '将重复的工程工作变成清晰、可复用的命令与模板，帮助团队更专注于真正重要的问题。', role: '开发者体验 · 开源维护', tags: ['Node.js', 'CLI', 'Open Source'], link: 'https://github.com/your-handle', linkLabel: '访问 GitHub' }
+    { index: '03', title: '开源开发工具', description: '将重复的工程工作变成清晰、可复用的命令与模板，帮助团队更专注于真正重要的问题。', role: '开发者体验 · 开源维护', tags: ['Node.js', 'CLI', 'Open Source'], link: 'https://github.com/maxma615', linkLabel: '访问 GitHub' }
   ],
   skills: [
     { label: '构建', items: ['JavaScript / TypeScript', 'Python', 'Web 前端', '工程化'] },

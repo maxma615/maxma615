@@ -36,3 +36,8 @@ test('deployment workflow uploads and deploys the portfolio root', async () => {
   assert.match(workflow, /path: '\.'/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
 });
+
+test('documentation states the repository GitHub Pages address', async () => {
+  const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
+  assert.match(readme, /https:\/\/maxma615\.github\.io\/personal-portfolio\//);
+});

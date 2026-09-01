@@ -26,7 +26,7 @@ git push
 2. 在 **Build and deployment** 中选择 **GitHub Actions**。
 3. 推送到 `main` 分支后，等待名为 **Deploy portfolio to GitHub Pages** 的工作流完成。
 
-本站发布地址：`https://machao615.github.io/personal-portfolio/`。
+本站发布地址：`https://maxma615.github.io/personal-portfolio/`。
 
 ## 本地检查
 
