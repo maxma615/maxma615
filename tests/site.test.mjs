@@ -29,3 +29,10 @@ test('stylesheet defines the portfolio theme and mobile layout', async () => {
   assert.match(css, /@media \(max-width: 680px\)/);
   assert.match(css, /prefers-reduced-motion/);
 });
+
+test('deployment workflow uploads and deploys the portfolio root', async () => {
+  const workflow = await readFile(new URL('../.github/workflows/deploy-pages.yml', import.meta.url), 'utf8').catch(() => '');
+  assert.match(workflow, /actions\/upload-pages-artifact@v4/);
+  assert.match(workflow, /path: '\.'/);
+  assert.match(workflow, /actions\/deploy-pages@v4/);
+});
