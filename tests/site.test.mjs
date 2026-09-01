@@ -22,3 +22,10 @@ test('page contains planned section anchors and dynamic content containers', asy
     assert.match(page, new RegExp(`id="${id}"`));
   }
 });
+
+test('stylesheet defines the portfolio theme and mobile layout', async () => {
+  const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8').catch(() => '');
+  for (const token of ['--ink:', '--paper:', '--accent:']) assert.match(css, new RegExp(token));
+  assert.match(css, /@media \(max-width: 680px\)/);
+  assert.match(css, /prefers-reduced-motion/);
+});
