@@ -12,3 +12,13 @@ test('content source defines the required showcase groups', async () => {
     assert.match(source, new RegExp(`${field}:`));
   }
 });
+
+test('page contains planned section anchors and dynamic content containers', async () => {
+  const page = await readFile(new URL('../index.html', import.meta.url), 'utf8').catch(() => '');
+  for (const id of ['about', 'achievements', 'projects', 'skills', 'contact']) {
+    assert.match(page, new RegExp(`id="${id}"`));
+  }
+  for (const id of ['achievements-list', 'projects-list', 'skills-list']) {
+    assert.match(page, new RegExp(`id="${id}"`));
+  }
+});
