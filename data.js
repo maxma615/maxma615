@@ -1,10 +1,10 @@
 export const portfolioData = {
   profile: {
-    name: '你的名字',
-    role: '开发者 · 竞赛选手 · 创作者',
-    location: '中国 · 可远程协作',
-    intro: '我把复杂问题拆解成可落地的产品、算法与体验。这里记录我的比赛、项目与持续探索。',
-    email: 'hello@example.com',
+    name: 'Max.Ma',
+    role: '智能科学与技术 · AI / Robotics / CV',
+    location: 'Hangzhou Dianzi University · 中国',
+    intro: '专注于计算机视觉、机器人与边缘端 AI。这里记录我在开源工具、真实机器人系统与技术探索中的工作。',
+    email: 'maxma615@users.noreply.github.com',
     github: 'https://github.com/maxma615'
   },
   achievements: [
@@ -14,9 +14,9 @@ export const portfolioData = {
     { year: '2023', award: '优秀项目奖', event: '开源创新挑战赛', detail: '将开发工具贡献为可复用的开源项目。' }
   ],
   projects: [
-    { index: '01', title: '智能学习助手', description: '面向复杂知识整理的 AI 应用，把资料提炼、任务分解与学习反馈组织为流畅的一条工作流。', role: '产品设计 · 全栈开发', tags: ['LLM', 'React', 'Python'], link: '#contact', linkLabel: '查看合作方式' },
-    { index: '02', title: '视觉检测系统', description: '从数据标注到边缘部署的视觉识别方案，用于更快、更稳定地发现真实场景中的关键目标。', role: '算法工程 · 部署优化', tags: ['Computer Vision', 'ONNX', 'Edge AI'], link: '#achievements', linkLabel: '查看竞赛实践' },
-    { index: '03', title: '开源开发工具', description: '将重复的工程工作变成清晰、可复用的命令与模板，帮助团队更专注于真正重要的问题。', role: '开发者体验 · 开源维护', tags: ['Node.js', 'CLI', 'Open Source'], link: 'https://github.com/maxma615', linkLabel: '访问 GitHub' }
+    { index: '01', title: 'racing_vision_ai', description: '基于 ROS 2 的视觉事件系统：接收赛道信号并调用视觉语言模型分析目标帧，将感知结果接入真实机器人工作流。', role: 'ROS 2 · Computer Vision', tags: ['ROS 2', 'Python', 'VLM'], link: 'https://github.com/maxma615/racing_vision_ai', linkLabel: '查看仓库' },
+    { index: '02', title: 'rdk_LeRobot_tools', description: '面向 LeRobot 的 BPU 工具集，探索具身智能模型在 RDK 硬件上的工程化运行与部署支持。', role: 'Edge AI · Tooling', tags: ['C++', 'LeRobot', 'RDK'], link: 'https://github.com/maxma615/rdk_LeRobot_tools', linkLabel: '查看仓库' },
+    { index: '03', title: 'Skills', description: '一套持续演进的个人 AI 编程与研究工作流技能库，让重复性任务沉淀为可复用的工具与方法。', role: 'Developer Experience · Open Source', tags: ['Python', 'AI Agents', 'Tools'], link: 'https://github.com/maxma615/skills', linkLabel: '查看仓库' }
   ],
   skills: [
     { label: '构建', items: ['JavaScript / TypeScript', 'Python', 'Web 前端', '工程化'] },

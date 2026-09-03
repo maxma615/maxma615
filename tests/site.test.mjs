@@ -13,6 +13,11 @@ test('content source defines the required showcase groups', async () => {
   }
 });
 
+test('site profile identifies Max', async () => {
+  const source = await readFile(new URL('../data.js', import.meta.url), 'utf8');
+  assert.match(source, /name: 'Max\.Ma'/);
+});
+
 test('page contains planned section anchors and dynamic content containers', async () => {
   const page = await readFile(new URL('../index.html', import.meta.url), 'utf8').catch(() => '');
   for (const id of ['about', 'achievements', 'projects', 'skills', 'contact']) {
@@ -21,6 +26,7 @@ test('page contains planned section anchors and dynamic content containers', asy
   for (const id of ['achievements-list', 'projects-list', 'skills-list']) {
     assert.match(page, new RegExp(`id="${id}"`));
   }
+  assert.match(page, /Max\.Ma/);
 });
 
 test('stylesheet defines the portfolio theme and mobile layout', async () => {
@@ -37,7 +43,14 @@ test('deployment workflow uploads and deploys the portfolio root', async () => {
   assert.match(workflow, /actions\/deploy-pages@v4/);
 });
 
-test('documentation states the repository GitHub Pages address', async () => {
+test('documentation states the profile repository GitHub Pages address', async () => {
   const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
-  assert.match(readme, /https:\/\/maxma615\.github\.io\/personal-portfolio\//);
+  assert.match(readme, /https:\/\/maxma615\.github\.io\/maxma615\//);
+});
+
+test('profile README introduces Max and links featured work', async () => {
+  const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
+  for (const text of ['Max.Ma', 'Intelligent Science and Technology', 'racing_vision_ai', 'rdk_LeRobot_tools', 'skills']) {
+    assert.match(readme, new RegExp(text));
+  }
 });
