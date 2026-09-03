@@ -27,12 +27,15 @@ test('page contains planned section anchors and dynamic content containers', asy
     assert.match(page, new RegExp(`id="${id}"`));
   }
   assert.match(page, /Max\.Ma/);
+  assert.match(page, /class="profile-sidebar"/);
+  assert.match(page, /avatars\.githubusercontent\.com\/u\/104949824/);
 });
 
-test('stylesheet defines the portfolio theme and mobile layout', async () => {
+test('stylesheet defines the editorial profile theme and mobile layout', async () => {
   const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8').catch(() => '');
-  for (const token of ['--ink:', '--paper:', '--accent:']) assert.match(css, new RegExp(token));
-  assert.match(css, /@media \(max-width: 680px\)/);
+  for (const token of ['--canvas:', '--surface:', '--accent:']) assert.match(css, new RegExp(token));
+  assert.match(css, /\.profile-sidebar/);
+  assert.match(css, /@media \(max-width: 900px\)/);
   assert.match(css, /prefers-reduced-motion/);
 });
 
