@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Max.Ma 的个人作品集：边缘计算、计算机视觉、端侧 AI 与开源项目。" />
+    <meta name="description" content="马超 Max.Ma 的个人主页：个人介绍、边缘计算项目与技术博客。" />
     <link rel="canonical" href="https://maxma615.github.io/maxma615/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Max.Ma · Edge Computing &amp; AI" />
-    <meta property="og:description" content="记录边缘计算、计算机视觉与端侧 AI 的工程实践。" />
+    <meta property="og:title" content="Max.Ma · 个人介绍、项目与博客" />
+    <meta property="og:description" content="关于我、做过的项目，以及边缘计算与端侧 AI 的技术记录。" />
     <meta property="og:url" content="https://maxma615.github.io/maxma615/" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/104949824?v=4" />
-    <title>Max.Ma · Edge Computing &amp; AI</title>
+    <title>Max.Ma · 个人介绍、项目与博客</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=personal-blog-1" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">跳转到主要内容</a>
@@ -31,12 +31,9 @@
           <a id="github-link" href="https://github.com/maxma615" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
         <nav data-portfolio-content hidden class="profile-nav" aria-label="页面导航">
-          <a href="#about"><span class="nav-index">01</span><span>关于 <small>ABOUT</small></span></a>
-          <a href="#experience"><span class="nav-index">02</span><span>经历 <small>EXPERIENCE</small></span></a>
-          <a href="#achievements"><span class="nav-index">03</span><span>成果 <small>ACHIEVEMENTS</small></span></a>
-          <a href="#projects"><span class="nav-index">04</span><span>项目 <small>PROJECTS</small></span></a>
-          <a href="#skills"><span class="nav-index">05</span><span>能力 <small>SKILLS</small></span></a>
-          <a href="#contact"><span class="nav-index">06</span><span>联系 <small>CONTACT</small></span></a>
+          <a href="#about"><span class="nav-index">01</span><span>关于我 <small>ABOUT</small></span></a>
+          <a href="#projects"><span class="nav-index">02</span><span>项目 <small>PROJECTS</small></span></a>
+          <a href="#blog"><span class="nav-index">03</span><span>博客 <small>WRITING</small></span></a>
         </nav>
       </aside>
 
@@ -49,9 +46,25 @@
         <p class="content-fallback" id="content-fallback">完整经历也可以在 <a href="https://github.com/maxma615/maxma615#readme">GitHub 个人介绍 ↗</a> 中阅读。</p>
 
         <section class="content-section about-section" id="about" aria-labelledby="about-title">
-          <p class="section-label"><span>01</span> / 关于 <em>ABOUT</em></p>
-          <h2 id="about-title"><span>让 AI 在边缘</span><span>设备上真正运行。</span></h2>
-          <p class="lead" id="profile-intro">你好，我是马超。关注边缘计算、计算机视觉与端侧 AI，喜欢把模型量化、设备推理和应用开发连接成一个可以实际运行的系统。</p>
+          <p class="section-label"><span>01</span> / 关于我 <em>ABOUT ME</em></p>
+          <div class="about-intro-grid">
+            <div class="about-copy">
+              <p class="intro-mark" aria-hidden="true">HELLO, I BUILD AT THE EDGE <span>✦</span></p>
+              <h2 id="about-title"><span>你好，我是马超。</span><span>让 AI 靠近真实世界。</span></h2>
+              <p class="lead" id="profile-intro">我主要做边缘计算与端侧 AI，关注模型量化、设备上的推理验证，以及计算机视觉应用。喜欢把模型放到真实设备上，调通从输入到结果的完整流程。</p>
+            </div>
+            <div class="edge-visual" aria-label="边缘计算与端侧 AI 的动态示意图">
+              <span class="edge-visual-grid" aria-hidden="true"></span>
+              <span class="edge-orbit edge-orbit-one" aria-hidden="true"></span>
+              <span class="edge-orbit edge-orbit-two" aria-hidden="true"></span>
+              <span class="edge-node edge-node-core"><span>AI</span></span>
+              <span class="edge-node edge-node-input"><span>DATA</span></span>
+              <span class="edge-node edge-node-output"><span>EDGE</span></span>
+              <span class="edge-beam edge-beam-one" aria-hidden="true"></span>
+              <span class="edge-beam edge-beam-two" aria-hidden="true"></span>
+              <span class="edge-visual-caption">MODEL / DEVICE / WORLD</span>
+            </div>
+          </div>
           <p class="profile-bio" id="profile-bio">2022 年进入杭州电子科技大学学习智能科学与技术。2025 年在地瓜机器人开发者生态部实习，参与 RDK 平台的模型量化、部署验证、机器人应用与开发者支持。</p>
           <ul class="highlights-list" id="highlights-list" aria-label="关注方向">
             <li class="highlight-item"><strong class="highlight-value">RDK S100 / X5</strong><span class="highlight-label">边缘端模型与应用</span></li>
@@ -60,41 +73,46 @@
           </ul>
           <div data-portfolio-content hidden class="hero-actions" aria-label="快速浏览">
             <a class="button button-primary" href="#projects">查看项目 <span aria-hidden="true">↓</span></a>
-            <a class="button button-quiet" href="#experience">了解经历 <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="#blog">阅读文章 <span aria-hidden="true">→</span></a>
+          </div>
+          <div data-portfolio-content hidden class="profile-details-stack" aria-label="关于我的补充信息">
+            <details class="profile-details" id="experience">
+              <summary><span><b>经历</b><small>EXPERIENCE</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="details-body"><ol class="experience-list" id="experience-list"></ol></div>
+            </details>
+            <details class="profile-details" id="achievements">
+              <summary><span><b>成果与荣誉</b><small>ACHIEVEMENTS</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="details-body"><ol class="achievement-list" id="achievements-list"></ol></div>
+            </details>
+            <details class="profile-details" id="skills">
+              <summary><span><b>能力与工具</b><small>SKILLS</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="details-body"><div class="skills-grid" id="skills-list"></div></div>
+            </details>
           </div>
         </section>
 
-        <section data-portfolio-content hidden class="content-section" id="experience" aria-labelledby="experience-title">
-          <div class="section-heading"><div><p class="section-label"><span>02</span> / 经历 <em>EXPERIENCE</em></p><h2 id="experience-title">让模型靠近设备。</h2></div><p>从学校里的探索，到边缘 AI 与机器人应用的工程实践。</p></div>
-          <ol class="experience-list" id="experience-list"></ol>
-        </section>
-
-        <section data-portfolio-content hidden class="content-section" id="achievements" aria-labelledby="achievements-title">
-          <div class="section-heading"><div><p class="section-label"><span>03</span> / 成果 <em>ACHIEVEMENTS</em></p><h2 id="achievements-title">竞赛与荣誉</h2></div><p>从机器人创意到智能车竞赛，在实践中学习感知、控制与团队协作。</p></div>
-          <ol class="achievement-list" id="achievements-list"></ol>
-        </section>
-
         <section data-portfolio-content hidden class="content-section" id="projects" aria-labelledby="projects-title">
-          <div class="section-heading"><div><p class="section-label"><span>04</span> / 项目 <em>SELECTED PROJECTS</em></p><h2 id="projects-title">把模型带到边缘。</h2></div><p>围绕模型部署、视觉应用与开发者工具的持续实践。</p></div>
+          <div class="section-heading"><div><p class="section-label"><span>02</span> / 项目 <em>SELECTED PROJECTS</em></p><h2 id="projects-title">把模型带到边缘。</h2></div><p>围绕模型部署、视觉应用与开发者工具的持续实践。</p></div>
           <div class="project-grid" id="projects-list"></div>
         </section>
 
-        <section data-portfolio-content hidden class="content-section" id="skills" aria-labelledby="skills-title">
-          <p class="section-label"><span>05</span> / 能力 <em>SKILLS</em></p>
-          <h2 id="skills-title">关注的能力</h2>
-          <div class="skills-grid" id="skills-list"></div>
+        <section data-portfolio-content hidden class="content-section blog-section" id="blog" aria-labelledby="blog-title">
+          <div class="section-heading"><div><p class="section-label"><span>03</span> / 博客 <em>WRITING</em></p><h2 id="blog-title">把实践写下来。</h2></div><p>记录模型部署、边缘计算和项目中那些值得复盘的细节。</p></div>
+          <div class="blog-grid" id="blog-list"></div>
+          <p class="blog-empty" id="blog-empty">文章整理中。</p>
         </section>
 
-        <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-          <p class="section-label"><span>06</span> / 联系 <em>CONTACT</em></p>
-          <h2 id="contact-title">保持联系。</h2>
-          <p>如果你在做边缘计算、端侧 AI、视觉或开发者工具，欢迎交流。</p>
-          <a class="contact-link" href="https://github.com/maxma615" target="_blank" rel="noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a>
-        </section>
-
-        <footer class="site-footer">© <span id="current-year"></span> Max.Ma <span aria-hidden="true">·</span> Built with care.</footer>
+        <footer class="site-footer contact-section">
+          <div class="footer-contact">
+            <p class="section-label"><span>✦</span> 联系 <em>CONTACT</em></p>
+            <h2 id="contact-title">保持联系。</h2>
+            <p>如果你在做边缘计算、端侧 AI、视觉或开发者工具，欢迎交流。</p>
+            <a class="contact-link" href="https://github.com/maxma615" target="_blank" rel="noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="footer-meta">© <span id="current-year"></span> Max.Ma <span aria-hidden="true">·</span> Built with care.</p>
+        </footer>
       </main>
     </div>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="main.js?v=personal-blog-1"></script>
   </body>
 </html>

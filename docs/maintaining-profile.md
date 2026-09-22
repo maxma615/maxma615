@@ -31,3 +31,15 @@ python3 scripts/build-readme-assets.py
 - [Sindre Sorhus](https://github.com/sindresorhus/sindresorhus)：通过多处循环动图表达个人风格。
 
 封面、芯片、流程与项目动画为本仓库原创制作，未使用这些主页的图片或代码。
+
+## 个人站的内容顺序
+
+首页依次展示个人介绍、项目、博客。实习经历、获奖和技能收在个人介绍的展开区；`asOf` 只表示经历资料的截止时间，不限制博客文章的发布日期。
+
+项目在 `data.js` 的 `projects` 中维护。`artwork` 使用 `models`、`quantization`、`docs` 或 `vision`，对应仓库内的项目动图，系统减少动态效果时自动换成静态版本。
+
+博客在 `data.js` 的 `articles` 中维护，每篇包含 `title`（原文标题）、`summary`（准确摘要）、`url`（原文地址），以及可选的 `date`（YYYY-MM-DD）、`platform`、`tags`。只加入已确认由本人撰写的文章；文章可按希望展示的顺序排列。没有确认文章时显示整理中的说明，不生成示例文章或把参与维护的项目文档当作本人博客。
+
+文章打开原文地址，保留原来的发布平台。以后新增文章只需补充这一组内容，不必调整页面布局。
+
+发布内容或样式更新时，同步递增 `index.html` 与 `main.js` 中的资源版本参数，避免已访问过网站的浏览器沿用旧缓存。

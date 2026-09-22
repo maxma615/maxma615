@@ -1,4 +1,4 @@
-import { portfolioData } from './data.js';
+import { portfolioData } from './data.js?v=personal-blog-1';
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -32,12 +32,35 @@ const createAchievement = ({ year, award, event, detail }) => {
   return item;
 };
 
-const createProject = ({ index, title, repository, description, outcome, role, tags, link, linkLabel }) => {
+const createProjectArtwork = (name) => {
+  const picture = createElement('picture', 'project-art');
+  for (const [media, variant] of [
+    ['(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)', 'dark-static'],
+    ['(prefers-reduced-motion: reduce)', 'light-static'],
+    ['(prefers-color-scheme: dark)', 'dark']
+  ]) {
+    const source = document.createElement('source');
+    source.media = media;
+    source.srcset = `assets/readme/card-${name}-${variant}.svg`;
+    picture.append(source);
+  }
+  const image = document.createElement('img');
+  image.src = `assets/readme/card-${name}-light.svg`;
+  image.alt = '';
+  image.width = 400;
+  image.height = 144;
+  image.loading = 'lazy';
+  picture.append(image);
+  return picture;
+};
+
+const createProject = ({ index, artwork, title, repository, description, outcome, role, tags, link, linkLabel }) => {
   const card = createElement('article', 'project-card');
   const top = createElement('div', 'project-top');
   top.append(createElement('span', 'project-index', index), createElement('span', 'project-role', role));
   const tagList = createElement('ul', 'tag-list');
   tags.forEach((tag) => tagList.append(createElement('li', '', tag)));
+  if (artwork) card.append(createProjectArtwork(artwork));
   card.append(top, createElement('h3', '', title));
   if (repository) card.append(createElement('p', 'project-repository', repository));
   card.append(createElement('p', 'project-description', description));
@@ -63,6 +86,42 @@ const createSkillGroup = ({ label, items }) => {
   return group;
 };
 
+const createArticle = ({ title, date, platform, summary, tags = [], url }) => {
+  const card = createElement('article', 'blog-card');
+  const meta = createElement('div', 'blog-meta');
+  if (platform) meta.append(createElement('span', '', platform));
+  if (date) {
+    const time = createElement('time', '', date.replaceAll('-', '.'));
+    time.dateTime = date;
+    meta.append(time);
+  }
+  const heading = createElement('h3');
+  const titleLink = createElement('a', 'blog-title-link', title);
+  titleLink.href = url;
+  titleLink.target = '_blank';
+  titleLink.rel = 'noopener noreferrer';
+  heading.append(titleLink);
+  card.append(meta, heading, createElement('p', 'blog-summary', summary));
+  if (tags.length) {
+    const tagList = createElement('ul', 'tag-list');
+    tags.forEach(tag => tagList.append(createElement('li', '', tag)));
+    card.append(tagList);
+  }
+  const readLink = createElement('a', 'text-link', '阅读全文 ↗');
+  readLink.href = url;
+  readLink.target = '_blank';
+  readLink.rel = 'noopener noreferrer';
+  readLink.setAttribute('aria-label', `阅读《${title}》（新窗口打开）`);
+  card.append(readLink);
+  return card;
+};
+
+export function renderArticles(articles = []) {
+  const published = articles.filter(article => article.title && article.summary && /^https?:\/\//.test(article.url));
+  document.querySelector('#blog-list').replaceChildren(...published.map(createArticle));
+  document.querySelector('#blog-empty').hidden = published.length > 0;
+}
+
 export function renderPortfolio(data) {
   document.querySelector('#profile-name').textContent = data.profile.name;
   document.querySelector('#profile-role').textContent = data.profile.role;
@@ -76,6 +135,7 @@ export function renderPortfolio(data) {
   document.querySelector('#achievements-list').replaceChildren(...data.achievements.map(createAchievement));
   document.querySelector('#projects-list').replaceChildren(...data.projects.map(createProject));
   document.querySelector('#skills-list').replaceChildren(...data.skills.map(createSkillGroup));
+  renderArticles(data.articles);
   document.querySelectorAll('[data-portfolio-content]').forEach((element) => { element.hidden = false; });
   document.querySelector('#content-fallback').hidden = true;
 }

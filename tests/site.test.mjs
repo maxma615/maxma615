@@ -8,7 +8,7 @@ test('editable portfolio content source exists', async () => {
 
 test('content source defines the required showcase groups', async () => {
   const source = await readFile(new URL('../data.js', import.meta.url), 'utf8').catch(() => '');
-  for (const field of ['profile', 'achievements', 'projects', 'skills']) {
+  for (const field of ['profile', 'achievements', 'projects', 'articles', 'skills']) {
     assert.match(source, new RegExp(`${field}:`));
   }
 });
@@ -20,10 +20,10 @@ test('site profile identifies Max', async () => {
 
 test('page contains planned section anchors and dynamic content containers', async () => {
   const page = await readFile(new URL('../index.html', import.meta.url), 'utf8').catch(() => '');
-  for (const id of ['about', 'achievements', 'projects', 'skills', 'contact']) {
+  for (const id of ['about', 'projects', 'blog']) {
     assert.match(page, new RegExp(`id="${id}"`));
   }
-  for (const id of ['achievements-list', 'projects-list', 'skills-list']) {
+  for (const id of ['achievements-list', 'projects-list', 'skills-list', 'blog-list', 'blog-empty']) {
     assert.match(page, new RegExp(`id="${id}"`));
   }
   assert.match(page, /Max\.Ma/);
