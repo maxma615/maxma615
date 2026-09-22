@@ -3,16 +3,16 @@ export const portfolioData = {
   asOf: '2025.09',
   profile: {
     name: 'Max.Ma',
-    role: '机器人应用开发 · 边缘端 AI',
+    role: '边缘计算 · 端侧 AI',
     location: '杭州电子科技大学 · 智能科学与技术',
-    intro: '你好，我是马超。关注机器人、计算机视觉与边缘端 AI，喜欢把模型部署、硬件调试和应用开发连接成一个可以实际运行的系统。',
-    bio: '2022 年进入杭州电子科技大学学习智能科学与技术。2025 年在地瓜机器人开发者生态部实习，参与 RDK 平台的模型部署、机械臂应用、技术文档与开发者支持。',
+    intro: '你好，我是马超。关注边缘计算、计算机视觉与端侧 AI，喜欢把模型量化、设备推理和应用开发连接成一个可以实际运行的系统。',
+    bio: '2022 年进入杭州电子科技大学学习智能科学与技术。2025 年在地瓜机器人开发者生态部实习，参与 RDK 平台的模型量化、部署验证、机器人应用与开发者支持。',
     github: 'https://github.com/maxma615'
   },
   highlights: [
     { value: 'RDK S100 / X5', label: '边缘端模型与应用' },
-    { value: 'ROS / ROS 2', label: '机器人开发与集成' },
-    { value: 'LeRobot · ACT', label: '机械臂与模仿学习实践' }
+    { value: 'BPU / Model Zoo', label: '量化部署与精度验证' },
+    { value: 'ROS / ROS 2', label: '设备接入与应用集成' }
   ],
   experience: [
     {
@@ -20,7 +20,7 @@ export const portfolioData = {
       title: '地瓜机器人 D-Robotics',
       role: '机器人应用开发实习生 · 开发者生态部',
       details: [
-        '参与 RDK S100 模型量化、部署与精度验证，以及 LeRobot 机械臂应用开发。',
+        '参与 RDK S100 模型量化、部署与精度验证，以及 LeRobot / ACT 边缘应用开发。',
         '完成 RDK X5 小智 AI 协议验证与适配，跑通语音对话、天气和音乐搜索。',
         '维护 RDK 中英文手册，整理资源与 FAQ；完成文档图片迁移，并提供离线下载和链接替换脚本。',
         '参与创业森林、AdventureX、ROS 暑期学校及智能车省赛、国赛的技术支持与现场协作。'
@@ -45,17 +45,6 @@ export const portfolioData = {
   projects: [
     {
       index: '01',
-      title: 'LeRobot 机械臂实践',
-      repository: 'rdk_LeRobot_tools · D-Robotics fork',
-      description: '参与 RDK S100 上基于 LeRobot ACT 的叠衣服演示，协助打通全流程并沉淀部署文档。',
-      outcome: '在 ROS 暑期学校支持 ACT 量化部署，验证 ONNX 与 HBM 模型的推理精度。',
-      role: '协作开发 · 2025',
-      tags: ['RDK S100', 'LeRobot', 'ACT', '模型量化'],
-      link: 'https://github.com/maxma615/rdk_LeRobot_tools',
-      linkLabel: '查看工具与部署文档'
-    },
-    {
-      index: '02',
       title: 'RDK S100 Model Zoo',
       repository: 'D-Robotics / rdk_model_zoo_s',
       description: '参与 MobileNet、ResNet、EfficientNet-Lite 与 ByteTrack 的上库工作，编写量化部署说明与示例。',
@@ -64,6 +53,17 @@ export const portfolioData = {
       tags: ['Computer Vision', 'BPU', 'ImageNet', 'Python'],
       link: 'https://github.com/D-Robotics/rdk_model_zoo_s',
       linkLabel: '查看参与的上游项目'
+    },
+    {
+      index: '02',
+      title: 'ACT 边缘部署',
+      repository: 'rdk_LeRobot_tools · D-Robotics fork',
+      description: '参与 RDK S100 上基于 LeRobot ACT 的叠衣服演示，协助打通量化、部署与验证流程并沉淀文档。',
+      outcome: '在 ROS 暑期学校支持 ACT 量化部署，验证 ONNX 与 HBM 模型的推理精度。',
+      role: '协作开发 · 2025',
+      tags: ['RDK S100', 'LeRobot', 'ACT', '模型量化'],
+      link: 'https://github.com/maxma615/rdk_LeRobot_tools',
+      linkLabel: '查看工具与部署文档'
     },
     {
       index: '03',
@@ -87,7 +87,7 @@ export const portfolioData = {
   ],
   skills: [
     { label: '开发与协作', items: ['Python · Linux', 'ROS / ROS 2', 'Git · Markdown', 'C / C++（基础）'] },
-    { label: '模型与机器人', items: ['RDK 模型量化与部署', '计算机视觉 · 精度验证', 'LeRobot / ACT 应用实践', 'PyTorch（基础）'] },
+    { label: '模型与边缘计算', items: ['RDK 模型量化与部署', 'BPU 推理 · 精度验证', '计算机视觉', 'LeRobot / ACT 应用实践', 'PyTorch（基础）'] },
     { label: '文档与支持', items: ['中英文技术文档维护', '问题复现与排查', '开发者培训与社区支持', '竞赛与活动现场协作'] }
   ]
 };
