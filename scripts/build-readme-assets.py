@@ -3,6 +3,7 @@
 from pathlib import Path
 from html import escape
 import math
+import re
 from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
 from fontTools.pens.svgPathPen import SVGPathPen
@@ -62,6 +63,8 @@ CSS = '''
 
 
 def svg(w, h, title, desc, body, static=False, defs=''):
+    if static:
+        body = re.sub(r' (?:class|style)="[^"]*"', '', body)
     style = '' if static else f'<style>{CSS}</style>'
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>
@@ -182,7 +185,7 @@ def pipeline(theme,mobile,static):
         s.append(f'<path class="flow-fast" d="M{x+12} {y+95}H{x+width-12}" fill="none" stroke="{p["accent"]}" stroke-width="2"/>')
         if not mobile and i<3:
             s.append(f'<path d="M{x+214} {y+48}h15m-5-4 5 4-5 4" fill="none" stroke="{p["accent"]}"/>')
-    return svg(w,h,'Model → Quantize → Deploy → Validate','An animated overview of model deployment on edge devices; bars and packets are illustrative, not measured performance.', ''.join(s),static)
+    return svg(w,h,'Model → Quantize → Deploy → Validate',('A static overview' if static else 'An animated overview') + ' of model deployment on edge devices; bars and packets are illustrative, not measured performance.', ''.join(s),static)
 
 
 def card(kind,theme,static):
@@ -223,7 +226,7 @@ def card(kind,theme,static):
         for i,length in enumerate([198,147,222,165]):
             s.append(f'<path class="code-line" style="animation-delay:-{3-i*.65}s" d="M66 {54+i*18}h{length}" stroke="{p["accent"] if i==0 else p["muted"]}" stroke-width="4" stroke-linecap="round"/>')
         s.append(f'<rect class="cursor" x="240" y="102" width="6" height="9" fill="{p["accent"]}"/>')
-    return svg(400,144,f'{kind.title()} — edge computing project', 'A looping decorative illustration. '+('Static version.' if static else 'Not live telemetry.'),''.join(s),static)
+    return svg(400,144,f'{kind.title()} — edge computing project', ('A static decorative illustration.' if static else 'A looping decorative illustration. Not live telemetry.'),''.join(s),static)
 
 
 if __name__ == '__main__':
