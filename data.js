@@ -5,7 +5,7 @@ export const portfolioData = {
     name: 'Max.Ma',
     role: '边缘计算 · 端侧 AI',
     location: '杭州电子科技大学 · 智能科学与技术',
-    intro: '你好，我是马超。关注边缘计算、计算机视觉与端侧 AI，喜欢把模型量化、设备推理和应用开发连接成一个可以实际运行的系统。',
+    intro: '我主要做边缘计算与端侧 AI，关注模型量化、设备上的推理验证，以及计算机视觉应用。喜欢把模型放到真实设备上，调通从输入到结果的完整流程。',
     bio: '2022 年进入杭州电子科技大学学习智能科学与技术。2025 年在地瓜机器人开发者生态部实习，参与 RDK 平台的模型量化、部署验证、机器人应用与开发者支持。',
     github: 'https://github.com/maxma615'
   },
@@ -45,6 +45,7 @@ export const portfolioData = {
   projects: [
     {
       index: '01',
+      artwork: 'models',
       title: 'RDK S100 Model Zoo',
       repository: 'D-Robotics / rdk_model_zoo_s',
       description: '参与 MobileNet、ResNet、EfficientNet-Lite 与 ByteTrack 的上库工作，编写量化部署说明与示例。',
@@ -56,6 +57,7 @@ export const portfolioData = {
     },
     {
       index: '02',
+      artwork: 'quantization',
       title: 'ACT 边缘部署',
       repository: 'rdk_LeRobot_tools · D-Robotics fork',
       description: '参与 RDK S100 上基于 LeRobot ACT 的叠衣服演示，协助打通量化、部署与验证流程并沉淀文档。',
@@ -67,14 +69,19 @@ export const portfolioData = {
     },
     {
       index: '03',
-      title: '视觉引导机械臂抓取',
-      description: '调研机械臂 API 与 SDK，完成 LeRobot 接口集成，并设计不规则乐高积木抓取方案。',
-      outcome: '方案结合 YOLOv8 目标检测、FastSAM 分割与 PCA 位姿估计，探索视觉引导的抓取流程。',
-      role: '接口集成与方案设计 · 2025',
-      tags: ['YOLOv8', 'FastSAM', 'PCA', '机械臂']
+      artwork: 'docs',
+      title: 'RDK 节点与开发者文档',
+      repository: 'nodehub_YOLO · nodehub_asr · nodehub_tts',
+      description: '为 RDK 视觉和语音节点整理安装、部署与使用指南，帮助开发者把模型接入实际应用。',
+      outcome: '维护中英文技术文档，整理常见问题与部署步骤，并参与开发者活动现场支持。',
+      role: '开发者文档 · 2025',
+      tags: ['RDK', 'ROS 2', 'YOLO', 'Docs'],
+      link: 'https://github.com/maxma615/nodehub_YOLO',
+      linkLabel: '查看节点文档'
     },
     {
       index: '04',
+      artwork: 'vision',
       title: '赛道视觉事件分析',
       repository: 'racing_vision_ai',
       description: '接收 ROS 2 赛道信号，在指定状态采集图像，调用视觉语言模型完成图像理解。',
@@ -83,6 +90,17 @@ export const portfolioData = {
       tags: ['ROS 2', 'Python', 'VLM'],
       link: 'https://github.com/maxma615/racing_vision_ai',
       linkLabel: '查看项目源码'
+    }
+  ],
+  // Add only articles whose authorship and original links have been confirmed.
+  articles: [
+    {
+      title: '一文带你完成20届智能车备赛',
+      date: '2025-07-01',
+      platform: '地瓜机器人论坛',
+      summary: '从 RDK X3 / X5 和 ROS 2 环境准备出发，整理巡线、避障、扫码与远程控制的实现思路，以及模型部署和现场调试中的注意事项。',
+      tags: ['RDK', 'ROS 2', '智能车'],
+      url: 'https://forum.d-robotics.cc/t/topic/31265'
     }
   ],
   skills: [
