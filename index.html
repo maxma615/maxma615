@@ -3,69 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Max.Ma 的个人主页：计算机视觉、机器人、边缘端 AI 与开源项目。" />
-    <title>Max.Ma · 个人主页</title>
+    <meta name="description" content="Max.Ma 的个人作品集：计算机视觉、机器人、边缘端 AI 与开源项目。" />
+    <link rel="canonical" href="https://maxma615.github.io/maxma615/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Max.Ma · Robotics &amp; Edge AI" />
+    <meta property="og:description" content="记录计算机视觉、机器人与边缘端 AI 的工程实践。" />
+    <meta property="og:url" content="https://maxma615.github.io/maxma615/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/104949824?v=4" />
+    <title>Max.Ma · Robotics &amp; Edge AI</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">跳转到主要内容</a>
     <div class="site-frame" id="top">
       <aside class="profile-sidebar" aria-label="个人资料">
         <div class="profile-top">
-          <img class="profile-avatar" src="https://avatars.githubusercontent.com/u/104949824?v=4" alt="Max.Ma 的头像" width="208" height="208" />
+          <div class="avatar-wrap">
+            <img class="profile-avatar" src="https://avatars.githubusercontent.com/u/104949824?v=4" alt="Max.Ma 的头像" width="208" height="208" />
+          </div>
+          <p class="profile-kicker">MAX.MA / 个人档案</p>
           <h1 id="profile-name">Max.Ma</h1>
-          <p class="profile-role" id="profile-role"></p>
-          <p class="profile-location" id="profile-location"></p>
+          <p class="profile-role" id="profile-role">机器人应用开发 · 边缘端 AI</p>
+          <p class="profile-location" id="profile-location">杭州电子科技大学 · 智能科学与技术</p>
         </div>
         <div class="profile-links" aria-label="联系方式">
-          <a id="email-link" href="mailto:maxma615@users.noreply.github.com">Email</a>
-          <a id="github-link" href="https://github.com/maxma615" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://maxma615.github.io/maxma615/">Website ↗</a>
+          <a id="github-link" href="https://github.com/maxma615" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <nav class="profile-nav" aria-label="页面导航">
-          <a href="#about">About</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
+        <nav data-portfolio-content hidden class="profile-nav" aria-label="页面导航">
+          <a href="#about"><span class="nav-index">01</span><span>关于 <small>ABOUT</small></span></a>
+          <a href="#experience"><span class="nav-index">02</span><span>经历 <small>EXPERIENCE</small></span></a>
+          <a href="#achievements"><span class="nav-index">03</span><span>成果 <small>ACHIEVEMENTS</small></span></a>
+          <a href="#projects"><span class="nav-index">04</span><span>项目 <small>PROJECTS</small></span></a>
+          <a href="#skills"><span class="nav-index">05</span><span>能力 <small>SKILLS</small></span></a>
+          <a href="#contact"><span class="nav-index">06</span><span>联系 <small>CONTACT</small></span></a>
         </nav>
       </aside>
 
-      <main class="content-column">
+      <main class="content-column" id="main-content" tabindex="-1">
         <header class="content-header">
-          <span>MAX.MA / PERSONAL WEBSITE</span>
-          <span>2026</span>
+          <span class="header-eyebrow">PORTFOLIO <i aria-hidden="true">/</i> ROBOTICS &amp; EDGE AI</span>
+          <span class="content-as-of"><span id="content-as-of">经历更新至 2025.09</span></span>
         </header>
 
+        <p class="content-fallback" id="content-fallback">完整经历也可以在 <a href="https://github.com/maxma615/maxma615#readme">GitHub 个人介绍 ↗</a> 中阅读。</p>
+
         <section class="content-section about-section" id="about" aria-labelledby="about-title">
-          <p class="section-label">01 — ABOUT</p>
-          <h2 id="about-title">你好，我是 Max。</h2>
-          <p class="lead" id="profile-intro"></p>
-          <p>目前在杭州电子科技大学学习智能科学与技术，关注计算机视觉、机器人与边缘端 AI。我的工作通常始于一个真实问题，并以可复用的工具、模型或系统收束。</p>
+          <p class="section-label"><span>01</span> / 关于 <em>ABOUT</em></p>
+          <h2 id="about-title"><span>把 AI 带到</span><span>真实的机器人上。</span></h2>
+          <p class="lead" id="profile-intro">你好，我是马超。关注机器人、计算机视觉与边缘端 AI，喜欢把模型部署、硬件调试和应用开发连接成一个可以实际运行的系统。</p>
+          <p class="profile-bio" id="profile-bio">2022 年进入杭州电子科技大学学习智能科学与技术。2025 年在地瓜机器人开发者生态部实习，参与 RDK 平台的模型部署、机械臂应用、技术文档与开发者支持。</p>
+          <ul class="highlights-list" id="highlights-list" aria-label="关注方向">
+            <li class="highlight-item"><strong class="highlight-value">RDK S100 / X5</strong><span class="highlight-label">边缘端模型与应用</span></li>
+            <li class="highlight-item"><strong class="highlight-value">ROS / ROS 2</strong><span class="highlight-label">机器人开发与集成</span></li>
+            <li class="highlight-item"><strong class="highlight-value">LeRobot · ACT</strong><span class="highlight-label">机械臂与模仿学习实践</span></li>
+          </ul>
+          <div data-portfolio-content hidden class="hero-actions" aria-label="快速浏览">
+            <a class="button button-primary" href="#projects">查看项目 <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="#experience">了解经历 <span aria-hidden="true">→</span></a>
+          </div>
         </section>
 
-        <section class="content-section" id="achievements" aria-labelledby="achievements-title">
-          <div class="section-heading"><div><p class="section-label">02 — ACHIEVEMENTS</p><h2 id="achievements-title">比赛与经历</h2></div><p>把解决问题的过程沉淀下来：从算法训练到完整的技术方案与协作交付。</p></div>
+        <section data-portfolio-content hidden class="content-section" id="experience" aria-labelledby="experience-title">
+          <div class="section-heading"><div><p class="section-label"><span>02</span> / 经历 <em>EXPERIENCE</em></p><h2 id="experience-title">在真实系统里学习。</h2></div><p>从学校里的探索，到机器人软件开发的工程实践。</p></div>
+          <ol class="experience-list" id="experience-list"></ol>
+        </section>
+
+        <section data-portfolio-content hidden class="content-section" id="achievements" aria-labelledby="achievements-title">
+          <div class="section-heading"><div><p class="section-label"><span>03</span> / 成果 <em>ACHIEVEMENTS</em></p><h2 id="achievements-title">竞赛与荣誉</h2></div><p>从机器人创意到智能车竞赛，在实践中学习感知、控制与团队协作。</p></div>
           <ol class="achievement-list" id="achievements-list"></ol>
         </section>
 
-        <section class="content-section" id="projects" aria-labelledby="projects-title">
-          <div class="section-heading"><div><p class="section-label">03 — SELECTED PROJECTS</p><h2 id="projects-title">项目</h2></div><p>围绕机器人、视觉与开发者工具的持续实践。</p></div>
+        <section data-portfolio-content hidden class="content-section" id="projects" aria-labelledby="projects-title">
+          <div class="section-heading"><div><p class="section-label"><span>04</span> / 项目 <em>SELECTED PROJECTS</em></p><h2 id="projects-title">把想法做成工具。</h2></div><p>围绕机器人、视觉与开发者工具的持续实践。</p></div>
           <div class="project-grid" id="projects-list"></div>
         </section>
 
-        <section class="content-section" id="skills" aria-labelledby="skills-title">
-          <p class="section-label">04 — SKILLS</p>
+        <section data-portfolio-content hidden class="content-section" id="skills" aria-labelledby="skills-title">
+          <p class="section-label"><span>05</span> / 能力 <em>SKILLS</em></p>
           <h2 id="skills-title">关注的能力</h2>
           <div class="skills-grid" id="skills-list"></div>
         </section>
 
         <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-          <p class="section-label">05 — CONTACT</p>
+          <p class="section-label"><span>06</span> / 联系 <em>CONTACT</em></p>
           <h2 id="contact-title">保持联系。</h2>
           <p>如果你在做机器人、视觉或 AI 工具相关的事，欢迎交流。</p>
           <a class="contact-link" href="https://github.com/maxma615" target="_blank" rel="noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a>
         </section>
 
-        <footer class="site-footer">© <span id="current-year"></span> Max.Ma · Built with care.</footer>
+        <footer class="site-footer">© <span id="current-year"></span> Max.Ma <span aria-hidden="true">·</span> Built with care.</footer>
       </main>
     </div>
     <script type="module" src="main.js"></script>
