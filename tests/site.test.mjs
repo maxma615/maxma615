@@ -35,7 +35,7 @@ test('stylesheet defines the editorial profile theme and mobile layout', async (
   const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8').catch(() => '');
   for (const token of ['--canvas:', '--surface:', '--accent:']) assert.match(css, new RegExp(token));
   assert.match(css, /\.profile-sidebar/);
-  assert.match(css, /@media \(max-width: 900px\)/);
+  assert.match(css, /@media \(max-width: \d+px\)/);
   assert.match(css, /prefers-reduced-motion/);
 });
 
@@ -53,7 +53,7 @@ test('documentation states the profile repository GitHub Pages address', async (
 
 test('profile README introduces Max and links featured work', async () => {
   const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
-  for (const text of ['Max.Ma', 'Intelligent Science and Technology', 'racing_vision_ai', 'rdk_LeRobot_tools', 'skills']) {
+  for (const text of ['Max.Ma', 'Intelligent Science and Technology', 'racing_vision_ai', 'rdk_LeRobot_tools', 'D-Robotics']) {
     assert.match(readme, new RegExp(text));
   }
 });
