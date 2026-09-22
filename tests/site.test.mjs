@@ -53,7 +53,7 @@ test('documentation states the profile repository GitHub Pages address', async (
 
 test('profile README introduces Max and links featured work', async () => {
   const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
-  for (const text of ['Max.Ma', 'Intelligent Science and Technology', 'racing_vision_ai', 'rdk_LeRobot_tools', 'D-Robotics']) {
+  for (const text of ['Max.Ma', '杭州电子科技大学', 'racing_vision_ai', 'rdk_LeRobot_tools', 'D-Robotics']) {
     assert.match(readme, new RegExp(text));
   }
 });
