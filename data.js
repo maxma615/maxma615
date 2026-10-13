@@ -1,12 +1,12 @@
-// Experience is a September 2025 snapshot; later repository activity is not a project date.
+// Current role confirmed in October 2026; internship project records remain a September 2025 snapshot.
 export const portfolioData = {
-  asOf: '2025.09',
+  asOf: '2026.10',
   profile: {
     name: 'Max Ma',
-    role: '边缘计算 · 端侧 AI',
-    location: '杭州电子科技大学 · 智能科学与技术',
+    role: '开源技术生态专家',
+    location: '地平线-地瓜机器人',
     intro: '我主要做边缘计算与端侧 AI，关注模型量化、设备上的推理验证，以及计算机视觉应用。喜欢把模型放到真实设备上，调通从输入到结果的完整流程。',
-    bio: '2022 年进入杭州电子科技大学学习智能科学与技术。2025 年在地瓜机器人开发者生态部实习，参与 RDK 平台的模型量化、部署验证、机器人应用与开发者支持。',
+    bio: '现为地平线-地瓜机器人正式员工，担任开源技术生态专家。2022 年进入杭州电子科技大学学习智能科学与技术，2025 年在地瓜机器人开发者生态部实习。',
     github: 'https://github.com/maxma615'
   },
   highlights: [
@@ -15,6 +15,12 @@ export const portfolioData = {
     { value: 'ROS / ROS 2', label: '设备接入与应用集成' }
   ],
   experience: [
+    {
+      period: '现在',
+      title: '地平线-地瓜机器人',
+      role: '开源技术生态专家 · 正式员工',
+      details: []
+    },
     {
       period: '2025',
       title: '地瓜机器人 D-Robotics',

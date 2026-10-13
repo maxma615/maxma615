@@ -22,12 +22,12 @@
 </samp></p>
 
 <p align="center">
-  我是 Max Ma，2022 年进入杭州电子科技大学学习智能科学与技术。<br>
-  2025 年在地瓜机器人 D-Robotics 开发者生态部实习，做机器人应用开发。<br>
+  我是 Max Ma，现为<strong>地平线-地瓜机器人</strong>正式员工，担任<strong>开源技术生态专家</strong>。<br>
+  2022 年进入杭州电子科技大学学习智能科学与技术，2025 年在地瓜机器人开发者生态部实习。<br>
   我关注模型如何在边缘设备上运行：从量化、BPU 推理和精度验证，到 Model Zoo、ROS 节点与实际应用。
 </p>
 
-<p align="center"><sub>经历截至 2025.09</sub></p>
+<p align="center"><sub>现任信息更新于 2026.10 · 实习项目记录截至 2025.09</sub></p>
 
 <p align="center">
   <picture>
@@ -106,6 +106,10 @@
 </table>
 
 ## 经历与荣誉
+
+**现在 · 地平线-地瓜机器人**
+
+开源技术生态专家 · 正式员工
 
 <details>
 <summary><strong>实习与工程实践 · 2025</strong></summary>

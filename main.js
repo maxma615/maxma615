@@ -1,4 +1,4 @@
-import { portfolioData } from './data.js?v=public-name-20261013';
+import { portfolioData } from './data.js?v=current-role-20261013';
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -128,7 +128,7 @@ export function renderPortfolio(data) {
   document.querySelector('#profile-location').textContent = data.profile.location;
   document.querySelector('#profile-intro').textContent = data.profile.intro;
   document.querySelector('#profile-bio').textContent = data.profile.bio;
-  document.querySelector('#content-as-of').textContent = `经历更新至 ${data.asOf}`;
+  document.querySelector('#content-as-of').textContent = `资料更新至 ${data.asOf}`;
   document.querySelector('#github-link').href = data.profile.github;
   document.querySelector('#highlights-list').replaceChildren(...data.highlights.map(createHighlight));
   document.querySelector('#experience-list').replaceChildren(...data.experience.map(createExperience));
