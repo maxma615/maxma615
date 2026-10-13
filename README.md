@@ -7,7 +7,7 @@
     <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/hero-dark-mobile.svg">
     <source media="(max-width: 600px)" srcset="assets/readme/hero-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/readme/hero-dark.svg">
-    <img src="assets/readme/hero-light.svg" width="100%" alt="Max.Ma · 马超 — Edge Computing, Computer Vision & Edge AI">
+    <img src="assets/readme/hero-light.svg" width="100%" alt="Max Ma — Edge Computing, Computer Vision & Edge AI">
   </picture>
 </p>
 
@@ -22,7 +22,7 @@
 </samp></p>
 
 <p align="center">
-  我是马超，2022 年进入杭州电子科技大学学习智能科学与技术。<br>
+  我是 Max Ma，2022 年进入杭州电子科技大学学习智能科学与技术。<br>
   2025 年在地瓜机器人 D-Robotics 开发者生态部实习，做机器人应用开发。<br>
   我关注模型如何在边缘设备上运行：从量化、BPU 推理和精度验证，到 Model Zoo、ROS 节点与实际应用。
 </p>

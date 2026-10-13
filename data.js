@@ -2,7 +2,7 @@
 export const portfolioData = {
   asOf: '2025.09',
   profile: {
-    name: 'Max.Ma',
+    name: 'Max Ma',
     role: '边缘计算 · 端侧 AI',
     location: '杭州电子科技大学 · 智能科学与技术',
     intro: '我主要做边缘计算与端侧 AI，关注模型量化、设备上的推理验证，以及计算机视觉应用。喜欢把模型放到真实设备上，调通从输入到结果的完整流程。',

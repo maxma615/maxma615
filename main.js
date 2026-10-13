@@ -1,4 +1,4 @@
-import { portfolioData } from './data.js?v=personal-blog-1';
+import { portfolioData } from './data.js?v=public-name-20261013';
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
