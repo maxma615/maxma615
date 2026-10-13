@@ -138,7 +138,7 @@ def hero(theme, mobile, static):
     if mobile:
         s += [lettering('MAXMA615 / ENGINEERING', 36, 42, 13, '#9CB5CB', 1.5),
               '<circle class="breathe" cx="588" cy="37" r="4" fill="#C5F76B"/>',
-              lettering('Max.Ma', 32, 154, 108, 'url(#name)', -5),
+              lettering('Max Ma', 32, 154, 108, 'url(#name)', -5),
               lettering('EDGE COMPUTING', 38, 199, 24, '#C5F76B', 1.9),
               lettering('Intelligence, on device.', 38, 241, 25, '#D8E7F3', -.4),
               '<path d="M38 271H602" stroke="#263C54"/>',
@@ -149,7 +149,7 @@ def hero(theme, mobile, static):
         s += [lettering('MAXMA615 / ENGINEERING', 44, 42, 11, '#9CB5CB', 1.3),
               '<circle class="breathe" cx="892" cy="37" r="3" fill="#C5F76B"/>',
               lettering('EDGE AI', 827, 42, 10, '#C5F76B', 1),
-              lettering('Max.Ma', 37, 173, 116, 'url(#name)', -5.6),
+              lettering('Max Ma', 37, 173, 116, 'url(#name)', -5.6),
               lettering('EDGE COMPUTING', 45, 219, 22, '#C5F76B', 1.8),
               lettering('Intelligence,', 45, 278, 32, '#D8E7F3', -.7),
               lettering('on device.', 45, 316, 32, '#D8E7F3', -.7),
@@ -164,7 +164,7 @@ def hero(theme, mobile, static):
     # Fine signals along the lower edge keep the whole cover connected.
     s.append(f'<path d="M22 {h-2}H{w-22}" stroke="#32627A"/>')
     s.append(f'<path class="flow" d="M22 {h-2}H{w-22}" stroke="#65E5EB" stroke-width="2"/>')
-    return svg(w,h,'Max.Ma — Edge Computing & AI','Original edge processor artwork with flowing data packets, pulsing compute tiles and floating model layers. '+('Static version.' if static else 'Continuously looping animation.'), ''.join(s),static,defs)
+    return svg(w,h,'Max Ma — Edge Computing & AI','Original edge processor artwork with flowing data packets, pulsing compute tiles and floating model layers. '+('Static version.' if static else 'Continuously looping animation.'), ''.join(s),static,defs)
 
 
 def pipeline(theme,mobile,static):

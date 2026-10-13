@@ -15,7 +15,7 @@ test('content source defines the required showcase groups', async () => {
 
 test('site profile identifies Max', async () => {
   const source = await readFile(new URL('../data.js', import.meta.url), 'utf8');
-  assert.match(source, /name: 'Max\.Ma'/);
+  assert.match(source, /name: 'Max Ma'/);
 });
 
 test('page contains planned section anchors and dynamic content containers', async () => {
@@ -26,7 +26,7 @@ test('page contains planned section anchors and dynamic content containers', asy
   for (const id of ['achievements-list', 'projects-list', 'skills-list', 'blog-list', 'blog-empty']) {
     assert.match(page, new RegExp(`id="${id}"`));
   }
-  assert.match(page, /Max\.Ma/);
+  assert.match(page, /Max Ma/);
   assert.match(page, /class="profile-sidebar"/);
   assert.match(page, /avatars\.githubusercontent\.com\/u\/104949824/);
 });
@@ -53,7 +53,7 @@ test('documentation states the profile repository GitHub Pages address', async (
 
 test('profile README introduces Max and links featured work', async () => {
   const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
-  for (const text of ['Max.Ma', '杭州电子科技大学', 'racing_vision_ai', 'rdk_LeRobot_tools', 'D-Robotics']) {
+  for (const text of ['Max Ma', '杭州电子科技大学', 'racing_vision_ai', 'rdk_LeRobot_tools', 'D-Robotics']) {
     assert.match(readme, new RegExp(text));
   }
 });
