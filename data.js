@@ -3,10 +3,10 @@ export const portfolioData = {
   asOf: '2026.10',
   profile: {
     name: 'Max Ma',
-    role: '开源技术生态专家',
-    location: '地平线-地瓜机器人',
+    role: '边缘计算 · 端侧 AI',
+    location: '模型部署 / 开源实践',
     intro: '我主要做边缘计算与端侧 AI，关注模型量化、设备上的推理验证，以及计算机视觉应用。喜欢把模型放到真实设备上，调通从输入到结果的完整流程。',
-    bio: '现为地平线-地瓜机器人正式员工，担任开源技术生态专家。2022 年进入杭州电子科技大学学习智能科学与技术，2025 年在地瓜机器人开发者生态部实习。',
+    bio: '2022 年进入杭州电子科技大学学习智能科学与技术。现在主要围绕 RDK 平台做模型部署、应用实践与开源技术分享。',
     github: 'https://github.com/maxma615'
   },
   highlights: [
@@ -18,7 +18,7 @@ export const portfolioData = {
     {
       period: '现在',
       title: '地平线-地瓜机器人',
-      role: '开源技术生态专家 · 正式员工',
+      role: '开源技术生态专家',
       details: []
     },
     {

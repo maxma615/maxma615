@@ -1,4 +1,4 @@
-import { portfolioData } from './data.js?v=current-role-20261013';
+import { portfolioData } from './data.js?v=intro-focus-20261013';
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
